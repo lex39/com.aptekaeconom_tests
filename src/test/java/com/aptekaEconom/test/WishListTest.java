@@ -2,6 +2,7 @@ package com.aptekaEconom.test;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -21,6 +22,7 @@ public class WishListTest extends ProductCardPage {
   }
 
   @Test
+  @DisplayName("Проверяю функционал - Отложить товар")
   public void selectedItemTest() {
     checkAvailabilityStatus();
     selectWishIconClick();
@@ -38,6 +40,7 @@ public class WishListTest extends ProductCardPage {
   }
 
   @Test
+  @DisplayName("Проверяю возможность добавить отложенный товар в заказ")
   public void addWishItemToOrder() {
     checkAvailabilityStatus();
     selectWishIconClick();
