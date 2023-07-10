@@ -3,7 +3,6 @@ package com.aptekaEconom.test;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -33,13 +32,8 @@ public class MainPage {
       WebDriver driver = new RemoteWebDriver(URI.create("http://localhost:4444/wd/hub").toURL(), chromeOptions);
       setWebDriver(driver);
     } else {
-      Configuration.browser = "firefox";
+      Configuration.browser = "chrome";
     }
-  }
-
-  @BeforeEach
-  public void setUp() {
-    Configuration.browserSize = browserSizeSmall;
   }
 
   public void open() {
