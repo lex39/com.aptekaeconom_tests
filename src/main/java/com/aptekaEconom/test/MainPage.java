@@ -23,18 +23,18 @@ public class MainPage {
   private static final SelenideElement wishIcon = $(".basket-link.delay.with_price.big.basket-count");
   private static final SelenideElement basketIcon = $(".basket-link.basket.has_prices.with_price.big");
 
-  @BeforeAll
-  public static void setDriver() throws MalformedURLException {
-    String isRemote = System.getenv("IS_REMOTE");
-    if (Objects.equals(isRemote, "true")) {
-      ChromeOptions chromeOptions = new ChromeOptions();
-      chromeOptions.setCapability("enableVNC:", true);
-      WebDriver driver = new RemoteWebDriver(URI.create("http://localhost:4444/wd/hub").toURL(), chromeOptions);
-      setWebDriver(driver);
-    } else {
-      Configuration.browser = "chrome";
-    }
-  }
+//  @BeforeAll
+//  public static void setDriver() throws MalformedURLException {
+//    String isRemote = System.getenv("IS_REMOTE");
+//    if (Objects.equals(isRemote, "true")) {
+//      ChromeOptions chromeOptions = new ChromeOptions();
+//      chromeOptions.setCapability("enableVNC:", true);
+//      WebDriver driver = new RemoteWebDriver(URI.create("http://localhost:4444/wd/hub").toURL(), chromeOptions);
+//      setWebDriver(driver);
+//    } else {
+//      Configuration.browser = "chrome";
+//    }
+//  }
 
   public void open() {
     Selenide.open("https://aptekaeconom.com/");
