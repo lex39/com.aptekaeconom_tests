@@ -54,7 +54,7 @@ public class WishListTest extends ProductCardPage {
     });
 
     step("Шаг 7. Проверяем что цена товара из избранного не добавилась стоимость заказа", () -> {
-      assertTrue(basketProductPage.checkOrderAmount(1));
+      assertTrue(basketProductPage.checkOrderAmount(0));
     });
   }
 
