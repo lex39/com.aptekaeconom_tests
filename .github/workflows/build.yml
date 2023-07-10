@@ -20,5 +20,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Test
-        run: ./gradlew test
+      - name: Build with Gradle
+        uses: gradle/gradle-build-action@gradle-8
+        with:
+            arguments: build
