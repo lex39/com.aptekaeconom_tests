@@ -20,7 +20,6 @@ public class MainPage {
 
   @BeforeEach
   public void setUp() {
-    Configuration.browser = CHROME;
     open("https://aptekaeconom.com");
     Selenide.webdriver().driver().getWebDriver().manage().addCookie(new Cookie(nameCookieRegion, valueCookieRegion));
     refresh();
