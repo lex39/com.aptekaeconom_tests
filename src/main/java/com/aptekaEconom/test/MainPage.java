@@ -1,10 +1,13 @@
 package com.aptekaEconom.test;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.Cookie;
+
+import static com.codeborne.selenide.Browsers.CHROME;
 import static com.codeborne.selenide.Selenide.*;
 
 
@@ -17,6 +20,7 @@ public class MainPage {
 
   @BeforeEach
   public void setUp() {
+    Configuration.browser = CHROME;
     open("https://aptekaeconom.com");
     Selenide.webdriver().driver().getWebDriver().manage().addCookie(new Cookie(nameCookieRegion, valueCookieRegion));
     refresh();
