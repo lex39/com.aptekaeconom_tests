@@ -23,6 +23,7 @@ public class MainPage {
   @BeforeEach
   public void setUp() {
     Configuration.browser = "firefox";
+    Configuration.headless = true;
     open("https://aptekaeconom.com");
     Selenide.webdriver().driver().getWebDriver().manage().addCookie(new Cookie(nameCookieRegion, valueCookieRegion));
     refresh();
